@@ -9,7 +9,6 @@ import (
 	"skeleton-dashboard/internal/posts"
 	"skeleton-dashboard/public"
 
-	"github.com/leapkit/leapkit/core/db"
 	"github.com/leapkit/leapkit/core/render"
 	"github.com/leapkit/leapkit/core/server"
 )
@@ -17,14 +16,6 @@ import (
 var (
 	//go:embed **/*.html **/*.html *.html
 	tmpls embed.FS
-
-	// DB is the database connection builder function
-	// that will be used by the application based on the driver and
-	// connection string.
-	DB = db.ConnectionFn(
-		cmp.Or(os.Getenv("DATABASE_URL"), "database.db?_timeout=5000&_sync=1"),
-		db.WithDriver("sqlite3"),
-	)
 )
 
 // Server interface exposes the methods

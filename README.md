@@ -7,8 +7,7 @@ A lightweight sample app demonstrating how to use **Go**, **HTMX**, and **Tailwi
 After clone, install the dependencies:
 
 ```sh
-go mod download
-go run ./cmd/setup
+$ go mod download
 ```
 
 ### Running the application
@@ -16,7 +15,7 @@ go run ./cmd/setup
 To run the application in development mode execute:
 
 ```sh
-> go run ./cmd/app
+$ go run ./cmd/app
 ```
 
 And open `http://localhost:3000` in your browser.
